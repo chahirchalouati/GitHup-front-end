@@ -1,0 +1,17 @@
+.post___container {
+  @include flex(column, none, none);
+  padding: 1em;
+  flex: 3;
+  .post___container__item {
+    padding: 1em;
+    height: max-content;
+    width: 100%;
+    margin: 0px auto;
+    background-color: white;
+    margin-bottom: 10px;
+    @include flex(column, none, none);
+  }
+  .post___container__footer {
+    @include flex(column, none, none);
+  }
+}

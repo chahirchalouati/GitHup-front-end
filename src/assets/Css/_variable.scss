@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "code font";
+  src: url("../font/JetBrainsMonoNL-Regular.ttf") format("truetype");
+}
+$fontSite: "Roboto", sans-serif;
+$fontCode: "code font";
+$BackgroundColorDark: rgb(36, 41, 46);
+$lightGrayHover: rgba(228, 228, 228, 0.753);
+$lightGrayInputBorder: rgba(214, 208, 208, 0.993);
+$whiteBackground: rgb(246, 248, 250);
+$placeHolderColorGray: rgb(122, 122, 122);
+$repoColorLink: rgb(5, 103, 213);
+$lightRepoColorLink: rgb(41, 119, 209);

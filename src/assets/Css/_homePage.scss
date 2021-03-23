@@ -1,0 +1,7 @@
+.container__home {
+  @include flex(row, none, none);
+  position: relative;
+
+  @import "asideHome";
+  @import "./asideHomeRight";
+}

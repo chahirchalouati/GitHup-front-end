@@ -1,0 +1,115 @@
+.readme_file {
+  width: 100%;
+  margin: 10px auto;
+
+  line-height: 1.5;
+  word-wrap: break-word;
+  border-radius: 5px;
+  background-color: $whiteBackground;
+  border: 1px solid $lightGrayHover;
+  .readme_file__header {
+    @include flex(row, center, space-between);
+    min-height: 3.5em;
+    background-color: $whiteBackground;
+    border: 1px solid $lightGrayHover;
+    padding: 0px 1em;
+    .readme_file__header_info {
+      @include flex(row, center, space-between);
+      span {
+        @include flex(row, center, space-between);
+        font-size: 12px;
+        padding: 0px 0.3em;
+        svg {
+          margin-right: 0.3em;
+        }
+      }
+    }
+    .readme_file__header_action {
+      svg {
+        margin: 0 1em;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(243, 244, 246);
+        }
+      }
+      @include flex(row, center, space-between);
+      width: calc(max-content * 1.5);
+      .repo___action_box_btn_act {
+        width: calc(max-content * 1.5);
+        @include flex(row, center, none);
+
+        border-radius: 5px;
+        background-color: white;
+        border: 1px solid $lightGrayHover;
+        margin-left: 0.5em;
+        font-weight: 500;
+        white-space: nowrap;
+        letter-spacing: 1px;
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.151);
+        color: $BackgroundColorDark;
+        text-transform: capitalize;
+        cursor: pointer;
+        transition: 0.1s ease-in-out;
+        span:hover {
+          background-color: rgb(243, 244, 246);
+        }
+        span {
+          font-size: 12px;
+          @include flex(row, center, none);
+          border-left: 1px solid $lightGrayHover;
+          padding: 0.3em 1em;
+        }
+      }
+    }
+  }
+  .readme_file_content {
+    padding: 2em 5em;
+    background-color: white;
+    ul {
+      margin-left: 2em;
+      font-size: 16px;
+      list-style-type: disc !important;
+      li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+        font-size: 16px;
+        word-wrap: break-word;
+        margin-bottom: 15px;
+        &::marker {
+          unicode-bidi: isolate;
+          font-variant-numeric: tabular-nums;
+          text-transform: none;
+          text-indent: 0px !important;
+          text-align: start !important;
+          text-align-last: start !important;
+        }
+      }
+    }
+    a {
+      font-size: 16px;
+      color: $repoColorLink;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    p {
+      font-size: 16px;
+      margin: 8px 0px;
+    }
+    h1,
+    h2,
+    h3 {
+      display: block;
+      font-size: 1.5em;
+      margin-block-start: 0.83em;
+      margin-block-end: 0.83em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+    }
+    h2,
+    h1 {
+      border-bottom: 1px solid rgba(156, 155, 155, 0.226);
+    }
+  }
+}

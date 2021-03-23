@@ -1,0 +1,75 @@
+nav {
+  height: 4.5rem;
+  width: 100%;
+  background-color: $BackgroundColorDark;
+  @include flex(row, center, none);
+  padding: 0px 2rem;
+  box-shadow: 0px 0px 3px $BackgroundColorDark;
+  .nav_box_seacrh {
+    margin: 0px 10px;
+    @include flex(row, center, none);
+
+    input {
+      width: 18em;
+      @include flex(row, center, none);
+      padding: 5px 1em;
+      background-color: $BackgroundColorDark;
+      border: 0.02em solid rgba(220, 225, 226, 0.589);
+      border-radius: 5px;
+      transition: 0.2s ease;
+      &::placeholder {
+        color: $lightGrayHover;
+      }
+      &:focus {
+        width: 30em;
+        background-color: white;
+        border: 0.02em solid $repoColorLink;
+        &::placeholder {
+          color: $placeHolderColorGray;
+        }
+      }
+    }
+  }
+  .nav_box_links {
+    padding: 0px 1em;
+    @include flex(row, center, none);
+    gap: 10px;
+    .nav_link {
+      color: white;
+      font-weight: 400;
+      letter-spacing: 1px;
+      font-size: 14px;
+      transition: 0.1s ease;
+      &:hover {
+        color: $lightGrayHover;
+        cursor: pointer;
+      }
+    }
+  }
+  .nav_box_profile {
+    @include flex(row, center, none);
+    margin-left: auto;
+    position: relative;
+    gap: 15px;
+    .nav_box_profile__item {
+      @include flex(row, center, none);
+      cursor: pointer;
+      img {
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+      }
+      &:hover {
+        svg {
+          fill: $lightGrayHover;
+        }
+      }
+      svg {
+        fill: white;
+        transition: 50ms ease-in-out;
+      }
+    }
+  }
+}

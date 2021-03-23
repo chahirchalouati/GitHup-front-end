@@ -1,0 +1,83 @@
+.repo_page__header {
+  @include flex(row, center, space-between);
+  margin: 10px;
+  min-height: 2em;
+  padding: 10px 2em;
+  .repo___name_box {
+    @include flex(row, center, none);
+    .access_type {
+      @include flex(row, center, none);
+      border-radius: 15em;
+      padding: 0.3em 1em;
+      background-color: white;
+      border: 1px solid $lightGrayHover;
+      margin-left: 0.5em;
+      font-size: 12px;
+      font-style: italic;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.151);
+      color: $placeHolderColorGray;
+    }
+    .repo_page__header_link {
+      @include flex(row, center, none);
+      color: $repoColorLink;
+      font-size: large;
+      margin-left: 0.5em;
+      font-weight: 500;
+
+      .username {
+        color: $lightRepoColorLink;
+        font-weight: 400;
+      }
+      span {
+        font-size: 18px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .repo___action_box {
+    @include flex(row, center, none);
+    gap: 10px;
+    .repo___action_box_btn_act {
+      width: calc(max-content * 1.5);
+      @include flex(row, center, none);
+
+      border-radius: 5px;
+      background-color: white;
+      border: 1px solid $lightGrayHover;
+      margin-left: 0.5em;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      letter-spacing: 1px;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.151);
+      color: $BackgroundColorDark;
+      text-transform: lowercase;
+      cursor: pointer;
+      transition: 0.1s ease-in-out;
+      &:hover {
+        background-color: rgb(243, 244, 246);
+      }
+      & > svg:first-child {
+        margin-left:  0.3em;
+      }
+      svg {
+        margin: 0px 3px;
+        fill: $placeHolderColorGray;
+      }
+      .span_title {
+        padding: 0.3em 0.5em;
+        font-size: 13px;
+      }
+      .counter {
+        @include flex(row, center, none);
+        border-left: 1px solid $lightGrayHover;
+        padding: 0.3em 1em;
+      }
+    }
+  }
+}

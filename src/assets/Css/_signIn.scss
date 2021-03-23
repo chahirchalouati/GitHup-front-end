@@ -1,0 +1,171 @@
+.signin_page {
+  @include flex(column, none, none);
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+
+  header {
+    @include flex(column, center, center);
+    padding: 2em;
+
+    .logo {
+      width: 4em;
+      height: 4em;
+      fill: rgb(88, 96, 105);
+    }
+    span {
+      font-size: 30px;
+      font-weight: 300;
+      padding-top: 1em;
+    }
+  }
+  main {
+    @include flex(column, center, center);
+    width: 100%;
+    .reset_in_form {
+      @extend .sign_in_form;
+    }
+    .sign_in_form {
+      box-sizing: border-box;
+      @include flex(column, none, none);
+      padding: 20px;
+      min-height: max-content;
+      min-width: 10em;
+      border-radius: 5px;
+      background-color: $whiteBackground;
+      border: 1px solid $lightGrayHover;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      letter-spacing: 1px;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.151);
+      width: 23rem;
+      p {
+        padding: 0.5em;
+        font-size: 13px;
+        word-wrap: break-word !important;
+        white-space: pre-line;
+      }
+      .input_box {
+        margin-bottom: 0.5rem;
+        padding: 0.5em;
+
+        @include flex(column, none, none);
+        .label {
+          @include flex(row, center, space-between);
+          font-size: 10px;
+          font-weight: 300;
+          margin-bottom: 0.5rem;
+          width: 100%;
+
+          span {
+            width: 100%;
+            font-size: 14px;
+            word-wrap: break-word !important;
+            white-space: pre-line;
+          }
+        }
+
+        input {
+          width: 100%;
+          height: 2.5em;
+          border-radius: 5px;
+          border: 1px solid $lightGrayInputBorder;
+          padding: 0 0.5em;
+          transition: 0.1s ease;
+          font-size: 14px;
+          font-weight: 300;
+          &:focus {
+            border: 1px solid $repoColorLink;
+            box-shadow: 0px 0px 5px $repoColorLink;
+          }
+        }
+      }
+      a {
+        font-size: 12px;
+        color: $repoColorLink;
+        font-weight: 400;
+      }
+      .btn_primary {
+        @include flex(column, center, center);
+        color: white;
+        background-color: rgb(44, 151, 75);
+        border-radius: 5px;
+        border: 1px solid green;
+        padding: 0.5em 1em;
+        text-transform: capitalize;
+        font-weight: 700;
+        display: flex;
+        cursor: pointer;
+      }
+    }
+    .sign_up_form {
+      @extend .sign_in_form;
+      width: 50em;
+      background-color: none;
+      background: none;
+      border: none;
+      box-shadow: none;
+      .label {
+        span {
+          font-weight: 500;
+        }
+      }
+      a {
+        color: $repoColorLink;
+        font-weight: 400;
+        margin-left: 0.3rem;
+      }
+      .password_info {
+        font-size: 11px;
+        font-weight: 400;
+        margin-left: 0.3rem;
+        margin-top: 5px;
+      }
+      p {
+        margin: 10px 0px;
+      }
+    }
+    .new_to {
+      margin-top: 1rem;
+      font-weight: 400;
+      @include flex(row, center, center);
+      padding: 20px;
+      min-height: max-content;
+      width: 23rem;
+      border-radius: 5px;
+      background-color: $whiteBackground;
+      border: 1px solid $lightGrayHover;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      letter-spacing: 1px;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.151);
+      font-size: 14px;
+      a {
+        color: $repoColorLink;
+        font-weight: 400;
+        margin-left: 0.3rem;
+      }
+      span {
+        font-weight: 400;
+      }
+    }
+  }
+  footer {
+    margin-top: auto;
+    margin-bottom: 2em;
+
+    @include flex(row, center, center);
+    gap: 10px;
+    a {
+      color: $repoColorLink;
+      font-weight: 400;
+      margin-left: 0.3rem;
+      font-size: 12px;
+    }
+    & > a:last-child {
+      color: $BackgroundColorDark;
+    }
+  }
+}

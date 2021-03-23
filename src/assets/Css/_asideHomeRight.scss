@@ -1,0 +1,79 @@
+.aside_right_info {
+  @include flex(column, none, none);
+  width: 28em;
+  position: sticky;
+  top: 0;
+  right: 0;
+  flex: 1.2;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 1em;
+  .aside_right_info__header {
+    padding: 1em 0px;
+    margin-bottom: 10px;
+    h4 {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  .explore_more_link {
+    @include flex(row, center, none);
+    text-transform: capitalize;
+    color: $BackgroundColorDark;
+    width: max-content;
+
+    span {
+      font-size: 13px;
+      @include flex(row, center, none);
+      margin-right: 0.5em;
+      font-style: italic;
+      font-weight: 300;
+      color: $BackgroundColorDark;
+    }
+  }
+}
+
+.explored__repository {
+  @include flex(column, none, none);
+
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 0.01em solid rgba(0, 0, 0, 0.062);
+  .explored__repository__header {
+    h5 {
+      color: $BackgroundColorDark;
+      font-size: small;
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+  }
+  .explored__repository__body {
+    p {
+      font-size: 12px;
+      padding-right: 1em;
+      word-wrap: break-word;
+      color: $BackgroundColorDark;
+    }
+    margin-bottom: 8px;
+  }
+  .explored__repository__footer {
+    @include flex(row, center, none);
+    gap: 15px;
+    .explored__repository__footer__items {
+      @include flex(row, center, none);
+      gap: 3px;
+      span {
+        color: $BackgroundColorDark;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      .rounded_color {
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background-color: yellow;
+      }
+    }
+  }
+}

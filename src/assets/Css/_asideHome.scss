@@ -1,0 +1,73 @@
+aside {
+  @include flex(column, none, none);
+  max-height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 25em;
+  padding: 1em;
+  background-color: white;
+  flex: 1.2;
+
+  .aside_header,
+  .search_box {
+    @include flex(row, center, space-between);
+    padding: 1em; font-weight: 500;
+    input {
+      width: 100%;
+      height: 2.5em;
+      border: 1px solid $lightGrayHover;
+      border-radius: 6px;
+      padding: 0px 0.5em;
+      background-color: $whiteBackground;
+      letter-spacing: normal;
+      word-spacing: normal;
+      text-transform: none;
+      text-indent: 0px;
+      text-shadow: none;
+      text-align: start;
+      appearance: auto;
+      border-width: 2px;
+      word-wrap: break-word;
+
+      &::placeholder {
+        color: $placeHolderColorGray;
+        font-weight: 400;
+      }
+    }
+  }
+  .aside_body {
+    @include flex(column, none, none);
+    padding: 1em;
+    .nav_link_aside_repo {
+      @include flex(row, center, none);
+      min-height: 2em;
+      margin: 2px 0px;
+      font-weight: 500;
+      &:hover {
+        text-decoration: underline;
+      }
+      color: $repoColorLink;
+      svg {
+        margin-right: 0.5em;
+      }
+    }
+  }
+  .aside_footer {
+    height: max-content;
+
+    @include flex(column, none, flex-end);
+    padding: 1em;
+    h3 {
+      margin-bottom: 10px;
+      color: rgb(36, 41, 46);
+      font-weight: 600;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: rgb(36, 41, 46);
+      margin-bottom: 15px;
+    }
+  }
+}

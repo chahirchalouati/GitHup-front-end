@@ -1,0 +1,26 @@
+.repository__container {
+  background-color: rgb(250, 251, 252);
+  @include flex(column);
+  .repository__container_header {
+    padding: 0px 2.5em;
+    @include flex(row, center, flex-start);
+    min-height: 2.5em;
+    width: 100%;
+    gap: 10px;
+    border-bottom: 0.02em solid rgba(77, 77, 77, 0.205);
+    .repository__container_header_link {
+      padding: 0.8em;
+      @include flex(row, center);
+      color: $BackgroundColorDark;
+      &:hover {
+        border-bottom: 0.02em solid $BackgroundColorDark;
+      }
+
+      svg {
+        fill: black;
+        opacity: 0.8;
+        margin-right: 0.5em;
+      }
+    }
+  }
+}
